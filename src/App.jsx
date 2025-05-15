@@ -1,4 +1,7 @@
-import Navbar from "./Components/navbar"; 
+// import Navbar from "./components/navbar"; 
+
+import Navbar from './components/navbar';
+
 import './App.css'; 
 import React from "react";
 import ProjectHighlights from "./components/ProjectHighlights";
