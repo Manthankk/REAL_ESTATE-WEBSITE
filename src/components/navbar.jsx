@@ -42,8 +42,8 @@ export default function Navbar() {
               
               {link.dropdown && openDropdown === index && (
                 <div className="absolute top-6 left-0 bg-white text-black p-2 shadow-md z-10 w-40">
-                  <p className="py-1 px-2 hover:bg-gray-100">Sub Item 1</p>
-                  <p className="py-1 px-2 hover:bg-gray-100">Sub Item 2</p>
+                  <p className="py-1 px-2 hover:bg-gray-100 text-[#f3ebdc]">Overview</p>
+                  <p className="py-1 px-2 hover:bg-gray-100 text-[#f3ebdc]" >LeaderShip</p>
                 </div>
               )}
             </div>
