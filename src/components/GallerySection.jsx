@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import podium from '../assets/podium.jpg';
 import podiumBirdEye from '../assets/birdpodium.jpg';
 import elevation from '../assets/elevation.jpg';
-import livingRoom from '../assets/living-room.jpg';
+import livingRoom from '../assets/Living-Room.jpg';
 import bedroom from '../assets/bedroom.jpg';
 import swimmingPool from '../assets/swimming.jpg';
 import gym from '../assets/gym.jpg';
