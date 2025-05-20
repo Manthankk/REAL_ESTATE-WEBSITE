@@ -1,4 +1,5 @@
 import React from 'react';
+import verticalImage from '../assets/amni1.png'; // vertical image
 import garden from '../assets/am1.png';
 import kidsPlay from '../assets/am2.svg';
 import climbing from '../assets/am3.png';
@@ -11,16 +12,16 @@ import gym from '../assets/am9.png';
 import bbq from '../assets/am10.png';
 
 const amenities = [
-  { label: "Naturally Themed Podium Gardens", icon: garden },
-  { label: "Kids Play Area", icon: kidsPlay },
-  { label: "Foam Pit With Rock Climbing Wall", icon: climbing },
-  { label: "Mini Boxing Ring", icon: boxing },
-  { label: "Swimming Pool", icon: pool },
-  { label: "Banquet Hall", icon: banquet },
-  { label: "Library And Working Areas", icon: library },
-  { label: "Indoor And Poolside Cafe", icon: cafe },
-  { label: "Indoor And Terrace Gym", icon: gym },
-  { label: "Barbeque Deck", icon: bbq },
+  { label: "Themed Podium Garden", icon: garden },
+  { label: "Children’s Play Area", icon: kidsPlay },
+  { label: "Rock Climbing Foam Pit", icon: climbing },
+  { label: "Boxing Ring Zone", icon: boxing },
+  { label: "Kids’ Swimming Pool", icon: pool },
+  { label: "Banquet & Party Hall", icon: banquet },
+  { label: "Library & Study Lounge", icon: library },
+  { label: "Indoor & Poolside Café", icon: cafe },
+  { label: "Terrace & Indoor Gym", icon: gym },
+  { label: "Barbecue Entertainment Deck", icon: bbq },
 ];
 
 const AmenitiesSection = () => {
@@ -34,29 +35,39 @@ const AmenitiesSection = () => {
         <div className="w-12 h-1 bg-yellow-600 mx-auto mt-1 rounded"></div>
       </div>
 
-      <div className="max-w-5xl mx-auto space-y-6">
-        {/* Top Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
-          {amenities.slice(0, 5).map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center space-y-2">
-              <div className="bg-[#f6e9d8] p-1 rounded-full shadow-sm">
-                <img src={item.icon} alt={item.label} className="w-9 h-9 object-contain" />
-              </div>
-              <p className="text-gray-700 text-xs md:text-sm">{item.label}</p>
-            </div>
-          ))}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
+        {/* Left Vertical Image */}
+        <div className="flex-shrink-0 w-full lg:w-[240px]">
+          <img
+            src={verticalImage}
+            alt="Resident Facilities Banner"
+            className="w-full object-contain rounded-xl shadow"
+          />
         </div>
 
-        {/* Bottom Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
-          {amenities.slice(5).map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center space-y-2">
-              <div className="bg-[#f6e9d8] p-1 rounded-full shadow-sm">
-                <img src={item.icon} alt={item.label} className="w-9 h-9 object-contain" />
+        {/* Right Amenities Grid */}
+        <div className="flex-1 space-y-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
+            {amenities.slice(0, 5).map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center space-y-2">
+                <div className="bg-[#f6e9d8] p-2 rounded-full shadow-sm hover:scale-105 transition">
+                  <img src={item.icon} alt={item.label} className="w-10 h-10 object-contain" />
+                </div>
+                <p className="text-gray-700 text-xs md:text-sm font-medium">{item.label}</p>
               </div>
-              <p className="text-gray-700 text-xs md:text-sm">{item.label}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
+            {amenities.slice(5).map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center space-y-2">
+                <div className="bg-[#f6e9d8] p-2 rounded-full shadow-sm hover:scale-105 transition">
+                  <img src={item.icon} alt={item.label} className="w-10 h-10 object-contain" />
+                </div>
+                <p className="text-gray-700 text-xs md:text-sm font-medium">{item.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

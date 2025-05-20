@@ -1,6 +1,7 @@
 import React from "react";
-import buildingImg from "../assets/building.jpg";
-import promoImg from "../assets/promo.jpg";
+import building from "../assets/building.png";
+import platinum from "../assets/platinum.png";
+
 
 const HeroSection = () => {
   return (
@@ -17,7 +18,7 @@ const HeroSection = () => {
 
           <div className="relative mt-6 md:mt-10 -ml-0 md:-ml-10">
             <img
-              src={promoImg}
+              src={platinum}
               alt="Promo"
               className="w-[240px] md:w-[300px] rounded-md shadow-2xl"
             />
@@ -26,7 +27,7 @@ const HeroSection = () => {
 
         <div className="relative z-0">
           <img
-            src={buildingImg}
+            src={building}
             alt="Building"
             className="w-[320px] md:w-[480px] rounded-lg shadow-lg"
           />

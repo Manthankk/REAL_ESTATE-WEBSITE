@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 import React from "react";
 import logo from '../assets/logo.svg';
+import swastik from '../assets/swastik.png';
+
 
 
 const navLinks = [
@@ -23,7 +25,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-        <img src={logo} alt="Logo" className="h-10" />
+        <img src={swastik} alt="Logo" className="h-15 w-max" />
         </div>
 
         <nav className="hidden md:flex space-x-6 text-sm font-medium text-[#5c4a2c] hover:text-[#a3865a] transition duration-200">

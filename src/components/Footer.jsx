@@ -9,10 +9,10 @@ const Footer = () => {
         <a href="#" className="text-white hover:underline">Residential</a>
         <a href="#" className="text-white hover:underline">Commercial</a>
         <a href="#" className="text-white hover:underline">Completed Projects</a>
-        <a href="#" className="text-white hover:underline">Chandak Sarvam</a>
-        <a href="#" className="text-white hover:underline">Chandak Highscape City</a>
-        <a href="#" className="text-white hover:underline">Chandak Treesourus</a>
-        <a href="#" className="text-white hover:underline">GreenAiry</a>
+        <a href="#" className="text-white hover:underline"> Sarvam</a>
+        <a href="#" className="text-white hover:underline"> Highscape City</a>
+        <a href="#" className="text-white hover:underline"> Treesourus</a>
+        <a href="#" className="text-white hover:underline">Green</a>
       </div>
 
       {/* About Us */}

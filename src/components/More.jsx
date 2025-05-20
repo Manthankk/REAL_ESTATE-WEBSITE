@@ -7,7 +7,7 @@ import chandak2 from "../assets/chandak2.jpg";
 
 const projects = [
   {
-    title: "CHANDAK SARVAM",
+    title: " SARVAM",
     location: "Andheri (E), Mumbai",
     image: chandak,
   },
@@ -17,12 +17,12 @@ const projects = [
     image: jade,
   },
   {
-    title: "CHANDAK HIGHSCAPE CITY",
+    title: " HIGHSCAPE CITY",
     location: "Chembur (E), Mumbai",
     image: chandak1,
   },
   {
-    title: "CHANDAK TREESOURUS",
+    title: " TREESOURUS",
     location: "Malad (W), Mumbai",
     image: chandak2,
   },

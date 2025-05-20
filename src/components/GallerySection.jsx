@@ -4,11 +4,16 @@ import podiumBirdEye from '../assets/birdpodium.jpg';
 import elevation from '../assets/elevation.jpg';
 import livingRoom from '../assets/Living-Room.jpg';
 import bedroom from '../assets/bedroom.jpg';
-import swimmingPool from '../assets/swimming.jpg';
 import gym from '../assets/gym.jpg';
 import siteProgress1 from '../assets/siteProgress1.jpg';
 import siteProgress2 from '../assets/siteProgress2.jpg';
 import siteProgress3 from '../assets/siteProgress3.jpg';
+
+import podium1 from '../assets/podium1.png';
+import play from '../assets/play.png';
+import swimming from '../assets/swimmingpool.png';
+import walking from '../assets/walkingarea.png';
+import room from '../assets/room.png';
 
 const tabs = ["Photos", "Videos"];
 const photoSubTabs = ["External", "Internal", "Amenities"];
@@ -25,8 +30,11 @@ const galleryData = {
       { title: "Bedroom", src: bedroom },
     ],
     Amenities: [
-      { title: "Swimming Pool", src: swimmingPool },
-      { title: "Gym", src: gym },
+      { title: "Podium Garden", src: podium1 },
+      { title: "Children's Play Area", src: play },
+      { title: "Swimming Pool", src: swimming },
+      { title: "Walking Track", src: walking },
+      { title: "Indoor Recreation Room", src: room },
     ],
   },
   Videos: {
@@ -44,7 +52,6 @@ const GallerySection = () => {
   const [activeTab, setActiveTab] = useState("Photos");
   const [activeSubTab, setActiveSubTab] = useState("External");
   const [startIndex, setStartIndex] = useState(0);
-
   const [siteStartIndex, setSiteStartIndex] = useState(0);
 
   const itemsPerSlide = 3;

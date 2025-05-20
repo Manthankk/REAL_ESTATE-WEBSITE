@@ -15,7 +15,9 @@ import InfoBox from "./components/InfoBox";
 import More from "./components/More";
 
 
-import heroImage from './assets/hero.jpg';
+// import heroImage from './assets/hero.jpg';
+import heroImage from './assets/image.png';
+
 import Footer from "./components/Footer";
 function App() {
   return (

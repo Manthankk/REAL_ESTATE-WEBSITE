@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import mapImage from '../assets/map.jpg';
-import floorPlanImage from '../assets/floorplan.jpg'; 
+import mapImage from "../assets/maps.png"; // ✅ Use this image everywhere
+import location from "../assets/location.png";
 const tabsData = [
   {
     id: 1,
     label: "EASY ACCESSIBILITY",
     content: (
-      <ul className="space-y-3 text-gray-300 text-sm">
-        <li>Western Express Highway - 0.5 km</li>
-        <li>Eastern Express Highway - 1.5 km</li>
-        <li>Borivali Railway Station - 3 km</li>
+      <ul className="space-y-2 text-sm text-gray-100">
+        <li>Western Express Highway – 0.5 km</li>
+        <li>Eastern Express Highway – 1.5 km</li>
+        <li>Borivali Railway Station – 3 km</li>
       </ul>
     ),
   },
@@ -17,12 +17,12 @@ const tabsData = [
     id: 2,
     label: "HOSPITALS",
     content: (
-      <ul className="space-y-3 text-gray-300 text-sm">
-        <li>Surbhi Life Care Hospital - 1.2 km</li>
-        <li>Apex Multispeciality Hospital - 1.8 km</li>
-        <li>Sanchaithi Super Specialty Hospital - 3 km</li>
-        <li>Lifeline Medicare Hospital - 1.6 km</li>
-        <li>Seven Star Multispeciality Hospital - 2.7 km</li>
+      <ul className="space-y-2 text-sm text-gray-100">
+        <li>Surbhi Life Care Hospital – 1.2 km</li>
+        <li>Apex Multispeciality Hospital – 1.8 km</li>
+        <li>Sanchaithi Super Specialty Hospital – 3 km</li>
+        <li>Lifeline Medicare Hospital – 1.6 km</li>
+        <li>Seven Star Multispeciality Hospital – 2.7 km</li>
       </ul>
     ),
   },
@@ -30,10 +30,10 @@ const tabsData = [
     id: 3,
     label: "COMMERCIAL HUBS",
     content: (
-      <ul className="space-y-3 text-gray-300 text-sm">
-        <li>Infinity Mall - 2 km</li>
-        <li>Oberoi Mall - 3.5 km</li>
-        <li>Inorbit Mall - 4 km</li>
+      <ul className="space-y-2 text-sm text-gray-100">
+        <li>Infinity Mall – 2 km</li>
+        <li>Oberoi Mall – 3.5 km</li>
+        <li>Inorbit Mall – 4 km</li>
       </ul>
     ),
   },
@@ -41,57 +41,64 @@ const tabsData = [
     id: 4,
     label: "EDUCATION",
     content: (
-      <ul className="space-y-3 text-gray-300 text-sm">
-        <li>Ryan International School - 2.5 km</li>
-        <li>St. John’s High School - 3 km</li>
-        <li>Thakur Public School - 3.5 km</li>
+      <ul className="space-y-2 text-sm text-gray-100">
+        <li>Ryan International School – 2.5 km</li>
+        <li>St. John’s High School – 3 km</li>
+        <li>Thakur Public School – 3.5 km</li>
       </ul>
     ),
   },
 ];
 
 const floorPlanTabs = [
-  { id: 'luxairy', label: 'LUXAIRY COLLECTION' },
-  { id: 'greenairy', label: 'GREENAIRY' },
+  { id: "luxairy", label: "LUXAIRY RESIDENCES" },
+  { id: "greenairy", label: "GREENAIRY HOMES" },
 ];
 
 const towerTabs = [
-  { id: 'a', label: 'TOWER A' },
-  { id: 'b', label: 'TOWER B' },
+  { id: "a", label: "WING A" },
+  { id: "b", label: "WING B" },
 ];
 
 const TabsSection = () => {
-  const [activeTab, setActiveTab] = useState(2); 
-  const [floorMainTab, setFloorMainTab] = useState('luxairy');
-  const [floorTowerTab, setFloorTowerTab] = useState('b');
+  const [activeTab, setActiveTab] = useState(2);
+  const [floorMainTab, setFloorMainTab] = useState("luxairy");
+  const [floorTowerTab, setFloorTowerTab] = useState("b");
 
   return (
-    <section className="bg-[#282f34] text-gray-200 py-16">
-      <div className="max-w-7xl mx-auto px-6 space-y-20">
+    <section className="relative py-24 bg-[#1e252b] text-white overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src={mapImage}
+          alt="Background"
+          className="w-full h-full object-cover opacity-10 grayscale"
+        />
+      </div>
 
-       
-        <div className="flex flex-col md:flex-row gap-10">
-     
-          <div className="flex-1 flex flex-col">
-            <span className="text-sm text-gray-400 tracking-widest mb-2">LOCATION</span>
-            <h2 className="text-3xl font-bold leading-tight mb-4">
-              WHERE THE WORLD IS AT <br /> YOUR FINGERTIPS
+      <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-24">
+        {/* LOCATION SECTION */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 className="text-4xl font-bold leading-tight mb-2">
+              WHERE THE WORLD IS AT YOUR FINGERTIPS
             </h2>
-            <div className="w-16 h-1 bg-[#c99a5d] rounded mb-6"></div>
-            <p className="text-gray-400 mb-8 leading-relaxed">
-              Located at Western Express Highway Borivali, the project offers seamless connectivity to key
-              areas. This project truly bridges the gap between convenience, mesmerizing views, and luxury
-              living with rapidly developing infrastructure, highways, malls, hospitals, entertainment
-              avenues, and corporate hubs.
+            <p className="text-[#c99a5d] text-sm italic mb-4">
+              "Every Legend Has a Story – Be Treasured With a Beloved Neighbourhood"
+            </p>
+            <div className="w-16 h-1 bg-[#c99a5d] mb-6"></div>
+
+            <p className="text-gray-300 mb-6">
+              Located along Western Express Highway, Swastik Platinum is a
+              connection point to your lifestyle, offering seamless access to
+              everything essential — highways, rail, schools, malls, and more.
             </p>
 
-          
-            <nav className="flex space-x-8 border-b border-gray-700 mb-6">
+            <div className="flex space-x-6 overflow-x-auto border-b border-gray-600 mb-6">
               {tabsData.map(({ id, label }) => (
                 <button
                   key={id}
                   onClick={() => setActiveTab(id)}
-                  className={`pb-2 text-sm tracking-wide transition-colors duration-300 ${
+                  className={`pb-2 text-sm tracking-wide transition-all ${
                     activeTab === id
                       ? "border-b-2 border-[#c99a5d] text-[#c99a5d] font-semibold"
                       : "text-gray-400 hover:text-[#c99a5d]"
@@ -100,54 +107,54 @@ const TabsSection = () => {
                   {label}
                 </button>
               ))}
-            </nav>
+            </div>
 
-            
-            <div>{tabsData.find((tab) => tab.id === activeTab)?.content}</div>
+            <div className="bg-white/10 backdrop-blur p-4 rounded-lg border border-white/10">
+              {tabsData.find((tab) => tab.id === activeTab)?.content}
+            </div>
           </div>
 
-         
-          <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg">
+          <div className="rounded-xl overflow-hidden shadow-lg relative">
             <img
               src={mapImage}
-              alt="Location Map"
-              className="w-full h-full object-cover"
+              alt="Map View"
+              className="w-full h-full object-cover rounded-xl"
             />
             <a
               href="https://goo.gl/maps/qXEjgjL5J7TwDQay6"
               target="_blank"
               rel="noreferrer"
-              className="absolute bottom-3 left-3 bg-white bg-opacity-90 text-gray-900 px-4 py-1 text-xs font-semibold rounded hover:bg-opacity-100 transition"
+              className="absolute bottom-4 left-4 bg-white/90 text-gray-900 px-4 py-1 text-xs font-semibold rounded hover:bg-white transition"
             >
-              CLICK TO VIEW ON GOOGLE MAP
+              VIEW ON GOOGLE MAP
             </a>
           </div>
         </div>
 
-       
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
-         
-          <div className="flex-1 rounded-lg overflow-hidden shadow-lg bg-white p-4">
+        {/* FLOOR PLAN SECTION — now using maps.png too */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="rounded-xl overflow-hidden shadow-lg bg-white p-4">
             <img
-              src={floorPlanImage}
+              src={location}
               alt="Floor Plan"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded"
             />
           </div>
 
-          <div className="flex-1">
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">CONFIGURATIONS</p>
-            <h2 className="text-2xl font-semibold mb-6 tracking-wide">
+          <div>
+            <p className="text-xs tracking-widest uppercase text-gray-400 mb-1">
+              CONFIGURATIONS
+            </p>
+            <h3 className="text-2xl font-bold text-white mb-6">
               WHERE ELEGANCE FINDS ITS HOME
-            </h2>
+            </h3>
 
-            
-            <nav className="flex gap-10 mb-6 text-sm font-semibold uppercase">
+            <div className="flex space-x-8 mb-6 text-sm font-semibold uppercase">
               {floorPlanTabs.map(({ id, label }) => (
                 <button
                   key={id}
                   onClick={() => setFloorMainTab(id)}
-                  className={`pb-2 border-b-2 transition ${
+                  className={`pb-2 border-b-2 ${
                     floorMainTab === id
                       ? "border-[#c99a5d] text-[#c99a5d]"
                       : "border-transparent text-gray-400"
@@ -156,15 +163,14 @@ const TabsSection = () => {
                   {label}
                 </button>
               ))}
-            </nav>
+            </div>
 
-       
-            <nav className="flex gap-10 mb-6 text-xs uppercase font-medium tracking-wide">
+            <div className="flex space-x-6 mb-6 text-xs uppercase tracking-wide font-medium">
               {towerTabs.map(({ id, label }) => (
                 <button
                   key={id}
                   onClick={() => setFloorTowerTab(id)}
-                  className={`pb-1 border-b-2 transition ${
+                  className={`pb-1 border-b-2 ${
                     floorTowerTab === id
                       ? "border-[#c99a5d] text-[#c99a5d]"
                       : "border-transparent text-gray-400"
@@ -173,29 +179,32 @@ const TabsSection = () => {
                   {label}
                 </button>
               ))}
-            </nav>
+            </div>
 
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#c99a5d] mb-8">
-              FLOOR PLAN
+            <p className="text-sm text-[#c99a5d] font-semibold uppercase tracking-widest mb-6">
+              FLOOR PLAN DETAILS
             </p>
 
-            <div className="flex gap-16">
+            <div className="flex gap-10">
               <div className="flex items-center gap-3">
-                <span className="text-[#c99a5d] text-2xl">🗺️</span>
+                <span className="text-2xl text-[#c99a5d]">📏</span>
                 <p>Spacious Passages</p>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-[#c99a5d] text-2xl">⌘</span>
-                <p>Smartly Designed Layout</p>
+                <span className="text-2xl text-[#c99a5d]">🧩</span>
+                <p>Smart Layouts</p>
               </div>
             </div>
 
-            <button className="mt-10 px-6 py-2 border border-[#c99a5d] text-[#c99a5d] font-semibold uppercase tracking-wide hover:bg-[#c99a5d] hover:text-gray-900 transition rounded">
-              Download Floor Plans
-            </button>
+            <a
+              href="/brochure.pdf"
+              download
+              className="mt-10 inline-block px-6 py-2 border border-[#c99a5d] text-[#c99a5d] font-semibold uppercase tracking-wide hover:bg-[#c99a5d] hover:text-gray-900 transition rounded"
+            >
+              Download Full Brochure
+            </a>
           </div>
         </div>
-
       </div>
     </section>
   );
